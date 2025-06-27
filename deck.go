@@ -1,4 +1,4 @@
-package poker
+package main
 
 type Card struct {
 	Suit  string

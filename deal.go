@@ -1,4 +1,4 @@
-package poker
+package main
 
 import (
 	"fmt"
@@ -89,9 +89,13 @@ func (d *Deck) DealCards(numHands, numCards int) Hands {
 func (d *Deck) GetDeal(numPlayers int) Deal {
 
 	hands := d.DealCards(numPlayers, 2)
+	//wait turn
 	flop := d.GetFlop()
+	//wait turn
 	turn := d.GetTurn()
+	//wait turn
 	river := d.GetRiver()
+	//wait turn and end
 
 	var board Cards
 	board = append(board, flop...)
