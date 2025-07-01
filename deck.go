@@ -27,3 +27,30 @@ func CreateDeck() Deck {
 	deck.CardIndex = 0
 	return deck
 }
+
+type ByNumber Cards
+
+func (n ByNumber) Len() int { return len(n) }
+func (n ByNumber) Less(i, j int) bool {
+
+	var index1, index2 int
+
+	for curIndex, val := range orderOfHighest {
+		if val == n[i].Value {
+			index1 = curIndex
+		}
+
+		if val == n[j].Value {
+			index2 = curIndex
+		}
+	}
+
+	return index1 < index2
+}
+
+func (n ByNumber) Swap(i, j int) { n[i], n[j] = n[j], n[i] }
+
+// Sort highest to lowest based on Value param
+func (c *Cards) Sort() {
+
+}

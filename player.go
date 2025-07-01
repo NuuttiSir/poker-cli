@@ -1,6 +1,9 @@
 package main
 
 type Player struct {
-	Id       int
-	HandName string
+	Id            int
+	Name          string
+	HandName      string
+	BestFiveCards Cards
+	Chips         Chips
 }
